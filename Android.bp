@@ -4,7 +4,7 @@
 
 soong_namespace {
     imports: [
-        "device/rockchip/rk3576-common",
+        "device/rockchip/rk35xx-common",
     ],
 }
 
@@ -1008,7 +1008,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vulkan.rk3576",
+    name: "vulkan.mali",
     owner: "rockchip",
     strip: {
         none: true,
@@ -1016,7 +1016,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/hw/vulkan.rk3576.so",
+                "proprietary/vendor/lib/hw/vulkan.mali.so",
             ],
             shared_libs: [
                 "libGLES_mali",
@@ -1028,7 +1028,7 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/hw/vulkan.rk3576.so",
+                "proprietary/vendor/lib64/hw/vulkan.mali.so",
             ],
             shared_libs: [
                 "libGLES_mali",
