@@ -521,16 +521,3 @@ PRODUCT_PACKAGES += \
     tee-supplicant \
     v4l2-ctl \
     vendorstorage_test
-
-ifeq ($(ROCKCHIP_SOC),rk3576)
-
-PRODUCT_COPY_FILES += \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/hwcomposer.rk30board.so_plus:$(TARGET_COPY_OUT_VENDOR)/etc/hwcomposer.rk30board.so_plus \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/hwc3-rk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3-rk.rc
-
-PRODUCT_PACKAGES += \
-    hwcomposer.rk30board \
-    hwc3-default.xml \
-    android.hardware.graphics.composer3-service.rockchip
-
-endif
