@@ -830,72 +830,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "hwcomposer.rk30board",
-    owner: "rockchip",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/hw/hwcomposer.rk30board.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libdrm",
-                "libhardware",
-                "liblog",
-                "libui-v34",
-                "libutils",
-                "libsync_vendor",
-                "libtinyxml2-v34",
-                "libbaseparameter",
-                "librga",
-                "libbase",
-                "libhidlbase",
-                "libgralloctypes",
-                "android.hardware.graphics.mapper@4.0",
-                "libpq",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/hwcomposer.rk30board.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libdrm",
-                "libhardware",
-                "liblog",
-                "libui-v34",
-                "libutils",
-                "libsync_vendor",
-                "libtinyxml2-v34",
-                "libbaseparameter",
-                "librga",
-                "libbase",
-                "libhidlbase",
-                "libgralloctypes",
-                "android.hardware.graphics.mapper@4.0",
-                "libpq",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "rockchip.hardware.outputmanager@1.0-impl",
     owner: "rockchip",
     strip: {
@@ -3077,15 +3011,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "hwc3-default.xml",
-    owner: "rockchip",
-    src: "proprietary/vendor/etc/vintf/manifest/hwc3-default.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "lights-rockchip.xml",
     owner: "rockchip",
     src: "proprietary/vendor/etc/vintf/manifest/lights-rockchip.xml",
@@ -3518,44 +3443,6 @@ cc_prebuilt_binary {
                 "libdmabufheap",
                 "android.hardware.graphics.allocator-V1-ndk",
                 "android.hardware.graphics.allocator-V1-arm",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.graphics.composer3-service.rockchip",
-    owner: "rockchip",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.graphics.composer3-service.rockchip",
-            ],
-            shared_libs: [
-                "android.hardware.graphics.composer@2.1-resources-v34",
-                "android.hardware.graphics.composer@2.4",
-                "libbase",
-                "libbinder",
-                "libbinder_ndk",
-                "libcutils",
-                "libfmq",
-                "libhardware",
-                "libhardware_legacy",
-                "liblog",
-                "libsync",
-                "libutils",
-                "android.hardware.graphics.composer3-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -4428,5 +4315,118 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "hwcomposer.rk30board",
+    owner: "rockchip",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/hw/hwcomposer.rk30board.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdrm",
+                "libhardware",
+                "liblog",
+                "libui-v34",
+                "libutils",
+                "libsync_vendor",
+                "libtinyxml2-v34",
+                "libbaseparameter",
+                "librga",
+                "libbase",
+                "libhidlbase",
+                "libgralloctypes",
+                "android.hardware.graphics.mapper@4.0",
+                "libpq",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/hwcomposer.rk30board.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libdrm",
+                "libhardware",
+                "liblog",
+                "libui-v34",
+                "libutils",
+                "libsync_vendor",
+                "libtinyxml2-v34",
+                "libbaseparameter",
+                "librga",
+                "libbase",
+                "libhidlbase",
+                "libgralloctypes",
+                "android.hardware.graphics.mapper@4.0",
+                "libpq",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "hwc3-default.xml",
+    owner: "rockchip",
+    src: "proprietary/vendor/etc/vintf/manifest/hwc3-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.graphics.composer3-service.rockchip",
+    owner: "rockchip",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.graphics.composer3-service.rockchip",
+            ],
+            shared_libs: [
+                "android.hardware.graphics.composer@2.1-resources-v34",
+                "android.hardware.graphics.composer@2.4",
+                "libbase",
+                "libbinder",
+                "libbinder_ndk",
+                "libcutils",
+                "libfmq",
+                "libhardware",
+                "libhardware_legacy",
+                "liblog",
+                "libsync",
+                "libutils",
+                "android.hardware.graphics.composer3-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
     soc_specific: true,
 }

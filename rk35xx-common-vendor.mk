@@ -208,7 +208,6 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/fstab_swap.ext512:$(TARGET_COPY_OUT_VENDOR)/etc/fstab_swap.ext512 \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/fstab_swap.extnone:$(TARGET_COPY_OUT_VENDOR)/etc/fstab_swap.extnone \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/graphic/graphic_profiles.conf:$(TARGET_COPY_OUT_VENDOR)/etc/graphic/graphic_profiles.conf \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/hwcomposer.rk30board.so_plus:$(TARGET_COPY_OUT_VENDOR)/etc/hwcomposer.rk30board.so_plus \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/android.hardware.camera.provider-V1-external-service-rk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider-V1-external-service-rk.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/android.hardware.camera.provider-V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider-V1-service.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/android.hardware.gatekeeper-service.optee.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service.optee.rc \
@@ -228,7 +227,6 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/hw/init.rk30board.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rk30board.usb.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/hw/init.rkai.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rkai.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/hw/init.rockchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rockchip.rc \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/hwc3-rk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3-rk.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.hdcp2-host.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.hdcp2-host.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.pq-init-32.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pq-init-32.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.pq-init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pq-init.rc \
@@ -405,7 +403,6 @@ PRODUCT_PACKAGES += \
     hdmi_cec.rk30board \
     hdmi_connection.rk30board \
     hw_output.default \
-    hwcomposer.rk30board \
     rockchip.hardware.outputmanager@1.0-impl \
     lib_sensor_listener_local \
     libbaseparameter \
@@ -471,7 +468,6 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.xml \
     android.hardware.usb.gadget-service.rockchip.xml \
     android.hardware.weaver-service.optee.xml \
-    hwc3-default.xml \
     lights-rockchip.xml \
     manifest_allocator.xml \
     manifest_media_c2_V1_1.xml \
@@ -495,7 +491,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider-V1-service \
     android.hardware.gatekeeper-service.optee \
     android.hardware.graphics.allocator-V1-service \
-    android.hardware.graphics.composer3-service.rockchip \
     android.hardware.health-service.rockchip \
     android.hardware.lights-service.rockchip \
     android.hardware.media.c2@1.1-service \
@@ -526,3 +521,16 @@ PRODUCT_PACKAGES += \
     tee-supplicant \
     v4l2-ctl \
     vendorstorage_test
+
+ifeq ($(ROCKCHIP_SOC),rk3576)
+
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/hwcomposer.rk30board.so_plus:$(TARGET_COPY_OUT_VENDOR)/etc/hwcomposer.rk30board.so_plus \
+    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/hwc3-rk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3-rk.rc
+
+PRODUCT_PACKAGES += \
+    hwcomposer.rk30board \
+    hwc3-default.xml \
+    android.hardware.graphics.composer3-service.rockchip
+
+endif
