@@ -220,68 +220,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libGLES_mali",
-    owner: "rockchip",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/egl/libGLES_mali.so",
-            ],
-            shared_libs: [
-                "android.hardware.graphics.allocator-V2-ndk",
-                "libbinder_ndk",
-                "liblog",
-                "libbase",
-                "libnativewindow",
-                "libutils",
-                "android.hardware.graphics.mapper@4.0",
-                "libgralloctypes",
-                "libhidlbase",
-                "libcutils",
-                "libhardware",
-                "libdmabufheap",
-                "libz",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/egl/libGLES_mali.so",
-            ],
-            shared_libs: [
-                "android.hardware.graphics.allocator-V2-ndk",
-                "libbinder_ndk",
-                "liblog",
-                "libbase",
-                "libnativewindow",
-                "libutils",
-                "android.hardware.graphics.mapper@4.0",
-                "libgralloctypes",
-                "libhidlbase",
-                "libcutils",
-                "libhardware",
-                "libdmabufheap",
-                "libz",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    relative_install_path: "egl",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "android.hardware.audio@7.1-impl",
     owner: "rockchip",
     strip: {
@@ -1008,44 +946,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vulkan.mali",
-    owner: "rockchip",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/hw/vulkan.mali.so",
-            ],
-            shared_libs: [
-                "libGLES_mali",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vulkan.mali.so",
-            ],
-            shared_libs: [
-                "libGLES_mali",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "lib_sensor_listener_local",
     owner: "rockchip",
     strip: {
@@ -1386,49 +1286,6 @@ cc_prebuilt_library_shared {
                 "libmpp",
                 "libdmabufheap",
                 "libstagefright_foundation",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgpudataproducer",
-    owner: "rockchip",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libgpudataproducer.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libbase",
-                "libdmabufheap",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgpudataproducer.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libbase",
-                "libdmabufheap",
                 "libc++",
                 "libc",
                 "libm",

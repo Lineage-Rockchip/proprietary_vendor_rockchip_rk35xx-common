@@ -395,7 +395,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider-V1-external-impl-rk \
     arm.graphics-V5-ndk \
     camera.device-external-impl-rk \
-    libGLES_mali \
     android.hardware.audio@7.1-impl \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.graphics.allocator-V1-arm \
@@ -408,7 +407,6 @@ PRODUCT_PACKAGES += \
     hw_output.default \
     hwcomposer.rk30board \
     rockchip.hardware.outputmanager@1.0-impl \
-    vulkan.mali \
     lib_sensor_listener_local \
     libbaseparameter \
     libbt-vendor-aic \
@@ -416,7 +414,6 @@ PRODUCT_PACKAGES += \
     libbt-vendor \
     libcodec2_rk_component \
     libcodec2_rk_store \
-    libgpudataproducer \
     libgralloc_priv_omx \
     libhwjpeg \
     libiep_vehicle \
