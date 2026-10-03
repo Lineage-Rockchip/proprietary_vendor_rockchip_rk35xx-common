@@ -7,7 +7,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/HwcVrrWhiteList.xml:$(TARGET_COPY_OUT_VENDOR)/etc/HwcVrrWhiteList.xml \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/aipq_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/aipq_config.json \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/bluetooth/aicbt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/aicbt.conf \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/bluetooth/skwbt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/skwbt.conf \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/bluetooth/sv6160.nvbin:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/sv6160.nvbin \
@@ -228,8 +227,6 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/hw/init.rkai.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rkai.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/hw/init.rockchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rockchip.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.hdcp2-host.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.hdcp2-host.rc \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.pq-init-32.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pq-init-32.rc \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.pq-init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pq-init.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.tee-supplicant.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.tune_io.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.tune_io.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/lights-rockchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights-rockchip.rc \
@@ -247,86 +244,12 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/pq_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pq_config.json \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/resolution_white.xml:$(TARGET_COPY_OUT_VENDOR)/etc/resolution_white.xml \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model0_DFC_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_DFC_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model0_NaturalSR540to1080_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_NaturalSR540to1080_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model0_NaturalSR720to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_NaturalSR720to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model0_fd_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_fd_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model0_fe_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_fe_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model0_fs_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_fs_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model0_fsr_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_fsr_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model0_sd_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_sd_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model0_std_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_std_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model10_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model10_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model10_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model10_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model10_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model10_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model11_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model11_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model11_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model11_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model11_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model11_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model11_IFBlockX5TxtSeg_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model11_IFBlockX5TxtSeg_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model12_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model12_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model12_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model12_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model12_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model12_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model1_DC1080p_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_DC1080p_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model1_DC540p_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_DC540p_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model1_DC720p_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_DC720p_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model1_DFC_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_DFC_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model1_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model1_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model1_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model1_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model1_fe_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_fe_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model2_DC1080p_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_DC1080p_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model2_DFC_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_DFC_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model2_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model3_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model3_NaturalSR720to1080_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_NaturalSR720to1080_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX5TxtSeg_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX5TxtSeg_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model4_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model4_NaturalSR720to1080_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_NaturalSR720to1080_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model5_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model5_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model5_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model5_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model5_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model5_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model5_IFBlockX4TxtSeg_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model5_IFBlockX4TxtSeg_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model5_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model5_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model5_NaturalSR720to1080_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model5_NaturalSR720to1080_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model6_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model6_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model6_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model6_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model6_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model6_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model7_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model7_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model7_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model7_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model7_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model7_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model8_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model8_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model8_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model8_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model8_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model8_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model9_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model9_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model9_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model9_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model9_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model9_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rkaipq_mssr_model9_IFBlockX5TxtSeg_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model9_IFBlockX5TxtSeg_rknn200_rk3576.bin \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/rockchip_forbid_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/rockchip_forbid_packages.xml \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.1-seccomp_policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.1-seccomp_policy \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/seccomp_policy/rockit.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/rockit.vendor.base.policy \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/session.xml:$(TARGET_COPY_OUT_VENDOR)/etc/session.xml \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/uvc_enc_cfg.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uvc_enc_cfg.conf \
-    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/vop_base_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/vop_base_config.json \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/wifi/p2p_supplicant_rtk.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_rtk.conf \
     vendor/rockchip/rk35xx-common/proprietary/vendor/etc/wifi/p2p_supplicant_ssv.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_ssv.conf \
@@ -416,13 +339,10 @@ PRODUCT_PACKAGES += \
     libiep_vehicle \
     libmemtrack-rockchip \
     libmpp \
-    libpq \
     librga \
     librkaiq \
-    librkhwpq \
     librkisp \
     librknnrt \
-    librkswpq \
     librkwifi-ctrl \
     libsculptor \
     libsync_vendor \
@@ -512,8 +432,6 @@ PRODUCT_PACKAGES += \
     init.box_early \
     init.insmod \
     media-ctl \
-    pq_init \
-    pq_init_32 \
     read_pcie_info \
     rkhelper \
     rkpq_tool_server \
@@ -521,3 +439,16 @@ PRODUCT_PACKAGES += \
     tee-supplicant \
     v4l2-ctl \
     vendorstorage_test
+
+ifeq ($(ROCKCHIP_SOC),rk3576)
+
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.pq-init-32.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pq-init-32.rc \
+    vendor/rockchip/rk35xx-common/proprietary/vendor/etc/init/init.pq-init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pq-init.rc
+
+PRODUCT_PACKAGES += \
+    libpq \
+    pq_init \
+    pq_init_32
+
+endif

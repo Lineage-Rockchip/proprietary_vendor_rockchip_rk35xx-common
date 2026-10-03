@@ -5,6 +5,7 @@
 soong_namespace {
     imports: [
         "device/rockchip/rk35xx-common",
+        "hardware/rockchip/libvisionpq",
     ],
 }
 
@@ -1446,69 +1447,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpq",
-    owner: "rockchip",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libpq.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libui",
-                "libutils",
-                "libsync_vendor",
-                "libbaseparameter",
-                "libhidlbase",
-                "libgralloctypes",
-                "android.hardware.graphics.mapper@4.0",
-                "libdrm",
-                "librga",
-                "librkhwpq",
-                "librkswpq",
-                "libvdpp",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libpq.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libui",
-                "libutils",
-                "libsync_vendor",
-                "libbaseparameter",
-                "libhidlbase",
-                "libgralloctypes",
-                "android.hardware.graphics.mapper@4.0",
-                "libdrm",
-                "librga",
-                "librkhwpq",
-                "librkswpq",
-                "libvdpp",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "librga",
     owner: "rockchip",
     strip: {
@@ -1599,43 +1537,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "librkhwpq",
-    owner: "rockchip",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/librkhwpq.so",
-            ],
-            shared_libs: [
-                "libm",
-                "libdl",
-                "libc",
-                "liblog",
-                "libz",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/librkhwpq.so",
-            ],
-            shared_libs: [
-                "libm",
-                "libdl",
-                "libc",
-                "liblog",
-                "libz",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "librkisp",
     owner: "rockchip",
     strip: {
@@ -1707,43 +1608,6 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libdl",
                 "libc",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "librkswpq",
-    owner: "rockchip",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/librkswpq.so",
-            ],
-            shared_libs: [
-                "libm",
-                "libdl",
-                "libc",
-                "liblog",
-                "libz",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/librkswpq.so",
-            ],
-            shared_libs: [
-                "libm",
-                "libdl",
-                "libc",
-                "liblog",
-                "libz",
             ],
         },
     },
@@ -4090,64 +3954,6 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-cc_prebuilt_binary {
-    name: "pq_init",
-    owner: "rockchip",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/pq_init",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libpq",
-                "libui",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "pq_init_32",
-    owner: "rockchip",
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/bin/pq_init_32",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libpq",
-                "libui",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
 sh_binary {
     name: "read_pcie_info",
     owner: "rockchip",
@@ -4311,6 +4117,127 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpq",
+    owner: "rockchip",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libpq.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libui",
+                "libutils",
+                "libsync_vendor",
+                "libbaseparameter",
+                "libhidlbase",
+                "libgralloctypes",
+                "android.hardware.graphics.mapper@4.0",
+                "libdrm",
+                "librga",
+                "librkhwpq",
+                "librkswpq",
+                "libvdpp",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libpq.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libui",
+                "libutils",
+                "libsync_vendor",
+                "libbaseparameter",
+                "libhidlbase",
+                "libgralloctypes",
+                "android.hardware.graphics.mapper@4.0",
+                "libdrm",
+                "librga",
+                "librkhwpq",
+                "librkswpq",
+                "libvdpp",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "pq_init",
+    owner: "rockchip",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/pq_init",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libpq",
+                "libui",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "pq_init_32",
+    owner: "rockchip",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/pq_init_32",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libpq",
+                "libui",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
     strip: {
         none: true,
     },
