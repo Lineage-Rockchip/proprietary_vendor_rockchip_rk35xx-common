@@ -344,7 +344,6 @@ PRODUCT_PACKAGES += \
     librkisp \
     librknnrt \
     librkwifi-ctrl \
-    libsculptor \
     libsync_vendor \
     libteec \
     libtinyalsa_iec958 \

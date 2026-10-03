@@ -1654,41 +1654,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsculptor",
-    owner: "rockchip",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libsculptor.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libm",
-                "libdl",
-                "libc",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsculptor.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libm",
-                "libdl",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsync_vendor",
     owner: "rockchip",
     strip: {
